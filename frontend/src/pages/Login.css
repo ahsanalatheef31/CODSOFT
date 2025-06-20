@@ -1,0 +1,242 @@
+.login-wrapper {
+  position: relative;
+  margin-top: 0 auto;
+  padding-top: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.login-container {
+  position: absolute;
+  animation: slideInFromLeft 0.6s ease-out forwards;
+ max-width: 320px;
+ max-height: 300px;
+  
+  margin: 0 auto;
+ margin-bottom: 100px;
+  padding: 30px;
+  
+  background-color: rgba(36, 32, 32, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.form input {
+  width: 40%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  
+}
+
+.form button[type="submit"] {
+  width: 250px;
+  padding: 12px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.form button[type="submit"]:hover {
+  background-color: #2e412f;
+}
+
+button {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: #33383d;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+button:hover {
+  color: #004c99;
+}
+@media screen and (max-width: 480px) {
+  .login-container {
+    padding: auto;
+    margin: 20px;
+    
+  }
+
+  .form input,
+  .form button[type="submit"] {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+.slider-container {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  background: #fff;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.4s cubic-bezier(0.77,0,0.175,1), opacity 0.4s;
+  opacity: 1;
+}
+
+.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-out {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .slider-container {
+    width: 90vw;
+    height: 180px;
+    min-width: 0;
+    margin: 0 auto 18px auto;
+  }
+}
+.login-main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.login-slider-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #CEC1A8 60%, #CEC1A9 100%);
+}
+
+.login-form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  position: relative;
+}
+
+.notefeed-hero {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 18px;
+  min-height: 80px;
+}
+
+.notefeed-main {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2.8rem;
+  color: #A86A69;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 16px #FFDBD5, 0 1px 0 #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.notefeed-fall {
+  position: absolute;
+  font-family: 'Indie Flower', cursive;
+  font-size: 2.2rem;
+  color: #85605B;
+  opacity: 0.7;
+  z-index: 1;
+  animation: fall-left 1.2s ease-in-out forwards;
+}
+
+.notefeed-fall.left {
+  left: 0;
+  top: -40px;
+  animation-delay: 0.2s;
+}
+
+.notefeed-fall.right {
+  right: 0;
+  top: -40px;
+  animation-delay: 0.5s;
+}
+
+@keyframes fall-left {
+  0% {
+    transform: translate(-80px, -80px) rotate(-30deg);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-main-layout {
+    flex-direction: column;
+  }
+  .login-slider-section, .login-form-section {
+    flex: unset;
+    width: 100%;
+    min-height: 180px;
+  }
+  .login-slider-section {
+    padding: 24px 0;
+  }
+  .notefeed-main {
+    font-size: 2rem;
+  }
+  .notefeed-fall {
+    font-size: 1.3rem;
+  }
+}

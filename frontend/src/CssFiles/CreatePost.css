@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.create-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: linear-gradient(135deg,#CEC1A8  60%, #CEC1A9 100%);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(138,98,93,0.18);
+  height: 350px;
+  color: #000000;
+}
+
+.create {
+  background-color: #d8daca;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+  background: #FFDBD5;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.create-form h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #000000;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.create-form input,
+.create-form textarea {
+  width: 90%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #A86A69;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-left: 18px;
+  background: #e5e3e2;
+  color: #85605B;
+}
+
+.create-form button {
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(90deg, #A86A69 0%, #8A625D 100%);
+  border: none;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 18px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.create-form button:hover {
+  background: linear-gradient(90deg, #8A625D 0%, #A86A69 100%);
+  color: #fff;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .create-form {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem auto;
+    height: auto;
+  }
+
+  .create-form input,
+  .create-form textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .create-form button {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .create {
+    background-position: center;
+    background-size: cover;
+  }
+}

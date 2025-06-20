@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.blog-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  flex: 1;
+  padding: 32px 24px;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #ffffff 0%, #867C71 100%);
+  margin-left: 250px;
+  margin-right: 100px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.blog-card {
+ 
+  border-radius: 14px;
+  padding: 18px 16px 14px 16px;
+  cursor: pointer;
+  background: rgba(225, 218, 202, 0.82);
+  color: #000000;
+  transition: 0.3s box-shadow, 0.3s background;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  min-height: 280px;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 5pxpx rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 240px;
+  position: relative;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 16px #23272f;
+  background: linear-gradient(120deg, #5b4c3d 30%, #5A4D42 100%);
+}
+
+.blog-card h3 {
+  color: #000000;
+  font-size: 1.3rem;
+  margin: 10px 0 8px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.blog-card .preview {
+  color: #000000;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  min-height: 40px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.post-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #23272f;
+  margin-bottom: 10px;
+}
+
+p {
+  font-style: italic;
+  color: #000000;
+}
+
+.blog-card .author {
+  font-style: italic;
+  color: #000000;
+  margin-top: auto;
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 1024px) {
+  .blog-list-container {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-list-container {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 2px;
+  }
+  .blog-card {
+    max-width: 98vw;
+    min-width: 0;
+    padding: 12px 6px;
+    height: 200px;
+  }
+  .post-img {
+    height: 100px;
+  }
+}
